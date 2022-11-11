@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Strona2</title>
+		<script defer src="script2.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<link rel="stylesheet" href="style2.css">
+		<link rel="stylesheet" href="modal.css">
+		<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+	</head>
+	
+	<body>
+		<div class="container container_stala_rata">
+			<header>
+				<h1 class="tytul">Kredyt ze stala rata</h1>
+			</header>
+			<div class="content">
+				<div class="info wszystko">
+					<p>Wysokosc raty przed zmianą oproc.: 105.74 pln</p>
+					<p>Wysokosc raty po zmianie oproc.: 105.74 pln</p>
+					<p>Do zaplaty: 2537.81 pln </p>
+					<p>Kwota kredytu: 2000.00 pln</p>
+					<p>Odsetki: 537.81 pln </p>
+					<p>Prowizja: 105.74 pln</p>
+				</div>
+				<div class="wykres">
+					<canvas id="myChart"></canvas>
+				</div>
+			</div>
+			<div class="harmonogram">
+				<button class="harmonogram_btn">Zobacz harmonogram rat</button>
+			</div>
+			
+			
+		</div>	
+
+		<div class="container">
+			<header>
+				<h1 class="tytul_oprocentowanie">Jak zmieni się rata przy zmianie stopy procentowej?</h1>
+			</header>
+			<div class="content">
+				<div class="info info_oprocentowanie">
+					<p>Oprocentowanie spada o 2,0% <span class="wzrost">105.74 PLN</span></p>
+					<p>Oprocentowanie spada o 1,0% <span class="wzrost">105.74 PLN</span></p>
+					<p>Oproc. kredytu na obecnym poziomie <span class="wzrost">2000.00 PLN</span></p>
+					<p>Oprocentowanie wzrasta o <span class="wzrost">105.74 PLN</span></p>
+					<p>Oprocentowanie wzrasta o <span class="wzrost">105.74 PLN</span></p>
+				</div>
+				<div class="wykres">
+					<canvas id="barChart"></canvas>
+				</div>
+			</div>
+		</div>
+		<div id="myModal" class="modal">
+
+			<div class="modal-content">
+			  <span class="close">&times;</span>
+			  <table>
+				<tr>
+					<th>Okres</th>
+					<th>Rata</th> 
+					<th>Odsetki</th>
+					<th>Czesc kapitalowa</th>
+					<th>Saldo dlugu</th>
+				  </tr>
+			  </table>
+			</div>
+		  
+		</div>
+		
+
+    </body>
+</html>

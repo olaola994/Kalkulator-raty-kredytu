@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Kalkulator raty kredytu</title>
+		<script   src="https://code.jquery.com/jquery-3.6.0.js"   integrity="sha256-H+K7U5CnXl1h5ywQfKtSj8PCmoN9aaq30gDh27Xc0jk="   crossorigin="anonymous"></script>
+		<script defer src="script.js"></script>
+		<link rel="stylesheet" href="style.css">
+		<link rel="preconnect" href="https://fonts.googleapis.com"> 
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin> 
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+	</head>
+	<body>
+		<div class="container">
+			<header>
+				<h1>Kalkulator raty kredytu</h1>
+			</header>
+			<main>
+				<form class="form_s">
+					<div>
+						<p class="error"></p>
+					</div>
+					<p>
+						<div class="pozyczona-kwota">
+							<label for="kwota">Ile pieniedzy chcesz pozyczyc? (minimum 500 zl)</label>
+							
+							<input
+								type="text"
+								class="kwota"
+								inputmode="numeric"
+								pattern="\d*"
+								required
+								placeholder="Kwota (w zlotowkach)"
+								tabindex="1"
+							/>
+						</div>
+					</p>
+
+					<div class="dropdown">
+						<div class="select">
+							<span class="selected">Wybierz okres spłat kredytu (miesieczny)</span>
+							<div class="caret"></div>
+						</div>
+						<ul class="menu_kapitalizacji">
+							<li class="active" value="miesieczny">Miesieczny</li>
+							<li value="kwartalny">Kwartalny</li>
+							<li value="roczny">Roczny</li>
+						</ul>
+					</div>
+					<p>
+						<div class="ilosc-rat">
+							<label for="raty">Na ile lat chcesz rozlozyc kredyt? Ilosc: <span class="demo"></span></label>
+							<p>
+								<div class="slidecontainer">
+									<input type="range" min="1" max="40" value="2" class="slider myRange">
+								</div>
+							</p>
+						</div>
+					</p>
+					<p>
+						<div class="wybor-oprocentowania">
+							<div>
+								<label for="oprocentowanie">Oprocentowanie (w skali roku)</label>
+								<input
+									type="text"
+									class="oprocentowanie"
+									inputmode="numeric" 
+									pattern="[0-9]+([.][0-9]+)?"
+									required
+									placeholder="W procentach"
+									tabindex="2"
+								/>
+							</div>
+							<div>
+								<button class="oprocentowanie-btn">Wyswietl opcje zaawansowane</button>
+							</div>
+							<div hidden>
+								<label for="oprocentowanie-okresy">Po ilu okresach chcesz zmienic oprocentowanie? </label>
+								<input
+									type="text"
+									inputmode="numeric" 
+									pattern="\d*"
+									class="oprocentowanie-okresy"
+									tabindex="2"
+								/>
+							</div>
+
+							<div hidden>
+								<label for="oprocentowanie-przyszle">Nowe oprocentowanie </label>
+								<input
+									type="text"
+									class="oprocentowanie-przyszle"
+									inputmode="numeric" 
+									pattern="\d*"
+									placeholder="W procentach"
+									tabindex="2"
+								/>
+							</div>
+
+						</div>
+					</p>
+					<p>
+						<div class="wybor-prowizji">
+							<label for="prowizja">Prowizja </label>
+							
+							<input
+								type="text"
+								class="prowizja"
+								inputmode="numeric" 
+								pattern="[0-9]+([.][0-9]+)?"
+								required
+								placeholder="W procentach"
+								tabindex="2"
+							/>
+						</div>
+					</p>
+
+					<p>
+						<div class="rodzaj-raty">
+							Wybierz ktora rate kredytu chcesz obliczyc:<br />
+								<input type="radio" name="wybor-raty" value="stala-rata" checked/><label for="stala-rata"> Ze stala rata</label>
+							<br/>
+							<input type="radio" name="wybor-raty" value="stala-ck" /><label for="stala-ck"> Ze stala czescia kapitalowa</label><br/>
+						</div>
+					</p>
+					<button class="submitButton" id="przycisk" type="submit">Oblicz</button>
+				</form>
+			</main>
+		</div>
+	</body>
+</html>

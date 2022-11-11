@@ -1,0 +1,245 @@
+:root{
+    --blue: rgb(199, 206, 230);
+    --black: #1b1b1b;
+}
+
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: var(--blue);
+    color: rgb(0, 0, 0);
+    font-family: 'Montserrat', sans-serif;
+    overflow: hidden;
+    overflow : scroll;
+}
+
+
+
+.container {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    background: rgb(255, 255, 255);
+    padding-bottom: 32px;
+    top: 200px;
+    padding-left: 32px;
+    padding-right: 32px;
+    border-radius: 10px;
+    flex-wrap: wrap;
+    margin: 10vh auto;
+    box-shadow: 8px 8px 24px -10px black;
+}
+
+
+.dropdown {
+    min-width: 15em;
+    position: relative;
+    margin: 2em;
+}
+.dropdown *{
+    box-sizing: border-box;
+}
+.select {
+    background: rgba(0,0,0, 0.25);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1em;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+
+.select:hover {
+    background: rgb(97, 118, 202);
+}
+
+.caret {
+    width: 0;
+    height: 0;
+    border-left: 5px solid transparent;
+    border-right: 5px solid transparent;
+    border-top: 6px solid #fff;
+    transition: 0.3s;
+}
+
+.caret-rotate {
+    transform: rotate(180deg);
+}
+
+.menu_kapitalizacji {
+    list-style: none;
+    padding: 0.2em 0.5em;
+    background: rgb(146, 156, 224);
+    box-shadow: 0 0.5em 1em rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: 3em;
+    left: 50%;
+    width: 100%;
+    transform: translateX(-50%);
+    opacity: 0;
+    display: none;
+    transition: 0.2s;
+    z-index: 1;
+}
+
+.menu_kapitalizacji li {
+    padding: 0.7em 0.5em;
+    cursor: pointer;
+}
+
+.menu_kapitalizacji li:hover{
+    background: rgb(182, 188, 229);
+}
+
+
+.menu_kapitalizacji-open{
+    display: block;
+    opacity: 1;
+}
+
+.slidecontainer {
+    width: 100%; 
+}
+
+.slider {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 100%;
+    height: 25px;
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1;
+}
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    background: rgb(27, 43, 213);
+    cursor: pointer;
+}
+
+
+h1 {
+    font-size: 40px;
+    padding: 12px 0 12px;
+}
+
+
+.form_s {
+    font-size: 20px;
+}
+
+.kwota,
+.prowizja,
+.wybor-oprocentowania > div,
+.wybor-oprocentowania input{
+    font-size: 20px;
+}
+
+
+
+p{
+    font-size: 20px;
+    font-weight: 400px;
+}
+
+
+
+header{
+    
+    display: flex; 
+    justify-content: center;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+}
+.container.container_stala_rata header{
+    width: 100%;
+}
+
+input[type='radio']:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 15px;
+   
+    position: relative;
+    background-color: #d1d3d1;
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+input[type='radio']:checked:after {
+    width: 10px;
+    height: 10px;
+    border-radius: 15px;
+  
+    position: relative;
+    background-color: rgb(27, 43, 213);
+    content: '';
+    display: inline-block;
+    visibility: visible;
+    border: 2px solid rgb(0, 0, 0);
+}
+
+.oprocentowanie-btn{
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;     
+    font-size: 20px;
+    color:rgb(105, 114, 213);
+}
+
+.oprocentowanie-btn:hover {
+    color: rgb(27, 43, 213);
+
+}
+
+.submitButton{
+    width: 150px;
+    padding: 10px 0;
+   
+    margin-left: 240px;
+    font-size: 25px;
+    font-weight: 600;
+    color: #fff;
+    background: rgb(27, 43, 213);
+
+    border: none;
+    cursor: pointer;
+    position: relative;
+    overflow: hidden;
+    border-radius: 10px;
+}
+.submitButton:after {
+    width: 50px;
+    height: 150%;
+    position: absolute;
+    left: -100px;
+    top: -25px;
+    content: "";
+    background-color: rgba(255, 255, 255, 0.2);
+    transform: rotate(20deg);
+    transition: transform 0.3s;
+    
+}
+
+.submitButton:hover:after{
+    transform: translateX(300px) rotate(20deg);
+}

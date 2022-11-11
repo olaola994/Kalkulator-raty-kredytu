@@ -1,0 +1,105 @@
+body{
+	overflow : scroll;
+    display: flex;
+    flex-flow: column;
+    padding-top: 150px;
+    padding-bottom: 150px;
+}
+.container_stala_rata {
+    max-width: 800px;
+    display: flex;
+}
+.content{
+    display: flex;
+}
+@media screen and (max-width: 1200px) {
+    .container.container_stala_rata .content{
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .container.container_stala_rata .wykres{
+        margin: 50px auto;
+    }
+  }
+.harmonogram{
+    right: 100px;
+    bottom: -40px;
+}
+
+.info {
+    display: inline-block;
+    width: 400px;
+    padding-left: 50px;
+    flex-direction: column;
+
+}
+
+.wykres {
+    display: inline-block;
+}
+
+#myChart {
+    width: 300px !important;
+    height: 300px !important;
+}
+
+.harmonogram_btn {
+    background-color: Transparent;
+    background-repeat:no-repeat;
+    border: none;
+    cursor:pointer;
+    overflow: hidden;     
+    font-size: 20px;
+    color:rgb(54, 162, 235);
+}
+.harmonogram_btn:hover {
+    color: rgb(255, 99, 132);
+}
+
+
+.tytul_oprocentowanie{
+    display: flex; 
+    justify-content: center;
+    margin-left: 80px;
+}
+
+
+
+#barChart {
+    width: 450px !important;
+    height: 360px !important;
+}
+
+.banki_dane {
+    display: flex;
+    flex-direction: column;
+
+}
+
+.bank_info{
+    display: flex;
+}
+
+
+
+.bank_nazwa {
+    font-size: 20px;
+    padding: 20px;
+}
+
+.bank_info > div{
+    flex-grow: 1;
+}
+
+.porownanie_bankow > h1 {
+    text-align: center;
+}
+
+.listing {
+    list-style-type: none;
+    padding: 0;
+}
+
+.cos {
+    color:rgb(24, 129, 199);
+}
